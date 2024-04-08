@@ -1,0 +1,139 @@
+body{
+  height:100svh;
+  width:100svw;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+/*   background-color:#A60311; */
+  background-color:#002F37;
+  color:#D5EFDB;
+}
+
+#settings{
+  height:260px;
+  width:100svw;
+/*   background-color:#D90B31; */
+  background-color:#005F6F;
+
+}
+
+#settings form{
+  padding-top:30px;
+  padding-bottom:30px;
+  width:340px;
+  margin:auto;
+  
+}
+
+.black-button{
+  color:white;
+  background-color:rgb(40,40,40);
+  border-radius:10px;
+}
+
+.form-ul{
+  margin:0;
+  padding:0;
+}
+
+.form-ul li{
+  list-style:none;
+  margin-top:10px;
+}
+
+.form-ul label{
+  margin-right:20px;
+  width:180px;
+  float:left;
+}
+
+#color-input{
+  border-radius:20px;
+}
+
+#paintArea{
+  height:350px;
+  width:100svw;
+  text-align:center;
+  margin-top:max(30px, calc(100vh - 500px - 260px));
+}
+
+#footer h2{
+  text-align:center;
+  color:rgba(255,255,255,0.5);
+}
+
+#canvas-container{
+  position:relative;
+  
+}
+
+#canvas{
+  transform-origin: center;
+  
+  
+  /* https://stackoverflow.com/questions/15007903/html5-canvas-with-rounded-corner 参照 */
+/*   border: 2px solid gray; */
+  border-radius: 50%;
+  
+  background-color:white;
+  /* this fixes the overflow:hidden in Chrome/Opera */
+  -webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+}
+
+#pen-preview-container{
+  width:220px;
+  margin:auto;
+  vertical-align:middle;
+}
+
+#pen-preview-canvas{
+  border: 4px solid #ECC100;
+  vertical-align:middle;
+  background-color:white;
+  border-radius:20%;
+}
+
+#rotation-visualize-div{
+  position:absolute;
+  left: calc(50vw - 150px);
+  
+  width:300px;
+  height:300px;
+  content:"";
+  background-color:rgba(255,255,255,0);
+  border: 2px #ECC100 solid;
+  transform-origin: center;
+  display:block;
+  margin:auto;
+  
+}
+
+#downloadDiv{
+  display:none;
+  
+  position:fixed;
+  top:0;
+  left:0;
+  height:260px;
+  width:100vw;
+  z-index:10;
+  background-color: rgba(0,0,0,0.9);
+  text-align:center;
+}
+
+#downloadContainer{
+  margin-top:120px;
+}
+
+
+#canvasForDownloadAsVideo{
+  display:none;
+  
+  /* for visualize*/
+/*   border: 2px black solid;
+  
+  position:fixed;
+  top:0;
+  z-index:10; */
+}
